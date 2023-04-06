@@ -1,8 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { FaCalendarAlt, FaStar } from 'react-icons/fa'
-import { useAxios } from '../data';
-import { useEffect, useState } from 'react';
-import { Cards } from '../interfaces/cards';
+import { useAxios } from '../hooks/useAxios';
+import { useEffect } from 'react';
 const Details = () => {
 
     const getParams = useParams()

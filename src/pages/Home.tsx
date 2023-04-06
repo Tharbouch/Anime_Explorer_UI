@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import Slider from '../components/slider';
 import Popular from '../components/Popular';
 import AllAnimes from '../components/AllAnimes';
-import { useAxios } from '../data';
+import { useAxios } from '../hooks/useAxios';
 export default function Home() {
     const [loading, data, error, request] = useAxios({
         url: 'https://nowc5l200m.execute-api.eu-west-3.amazonaws.com/getList',

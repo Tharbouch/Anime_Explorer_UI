@@ -19,7 +19,7 @@ const NavBar = () => {
         <header className={isTransparent ? 'top-page' : 'active'}>
             <div className='nav container'>
                 {/* logo */}
-                <a href="/Anime_Explorer" className='logo'>
+                <a href="/Anime_Explorer_UI" className='logo'>
                     <h1>Anime</h1>
                     <h1>List</h1>
                 </a>
