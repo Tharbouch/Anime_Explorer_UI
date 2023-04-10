@@ -32,7 +32,9 @@ const NavBar = () => {
                 </div>
                 {/* account  */}
                 <div className='account-icon'>
-                    <FaUserCircle />
+                    <button>
+                        <FaUserCircle />
+                    </button>
                 </div>
             </div>
         </header>

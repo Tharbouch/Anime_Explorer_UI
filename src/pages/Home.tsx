@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 
 import Slider from '../components/slider';
-import Popular from '../components/Popular';
-import AllAnimes from '../components/AllAnimes';
+import Popular from '../components/popularSlider';
+import AllAnimes from '../components/animeList';
 import { useAxios } from '../hooks/useAxios';
 export default function Home() {
     const [loading, data, error, request] = useAxios({
