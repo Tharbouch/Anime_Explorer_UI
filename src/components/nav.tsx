@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { FaSistrix, FaUserCircle } from 'react-icons/fa'
-const NavBar = () => {
+import Login from '../pages/Login';
 
+const NavBar = () => {
+    const [modalOpen, setModalOpen] = useState(false)
     const [isTransparent, setIsTransparent] = useState(true);
     const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -15,8 +17,16 @@ const NavBar = () => {
         setScrollPosition(position);
         setIsTransparent(position < window.innerHeight * 0.1);
     };
+
+    const close = () => {
+        setModalOpen(false)
+    }
+
+    const open = () => {
+        setModalOpen(true)
+    }
     return (
-        <header className={isTransparent ? 'top-page' : 'active'}>
+        <><header className={isTransparent ? 'top-page' : 'active'}>
             <div className='nav container'>
                 {/* logo */}
                 <a href="/Anime_Explorer_UI" className='logo'>
@@ -32,14 +42,19 @@ const NavBar = () => {
                 </div>
                 {/* account  */}
                 <div className='account-icon'>
-                    <button>
+                    <button onClick={() => (modalOpen ? close() : open())}>
                         <FaUserCircle />
                     </button>
                 </div>
             </div>
         </header>
 
-
+            {
+                <main>
+                    {modalOpen && <Login handleClose={close} />}
+                </main>
+            }
+        </>
     );
 }
 

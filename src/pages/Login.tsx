@@ -21,9 +21,9 @@ const dropIn = {
         opacity: 0
     },
 };
-const Login = () => {
+const Login = ({ handleClose }: any) => {
     return (
-        <Backdrop onClick={() => { }}>
+        <Backdrop onClick={handleClose}>
             <motion.div
                 onClick={(e) => { e.stopPropagation() }}
                 className="model"
@@ -33,6 +33,7 @@ const Login = () => {
                 exit="exit"
             >
                 <p>HI</p>
+                <button onClick={handleClose}></button>
             </motion.div>
         </Backdrop>
     );
